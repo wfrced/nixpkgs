@@ -42,13 +42,13 @@
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "siril";
-  version = "1.4.0-beta4";
+  version = "1.4.0-rc1";
 
   src = fetchFromGitLab {
     owner = "free-astro";
     repo = "siril";
     tag = finalAttrs.version;
-    hash = "sha256-oWw8LmcFXQkbpZz1Vvo1MSCRjAa3WexHrKGsJWpZnIA=";
+    hash = "sha256-u0aANvfvjlYNZ+JBu2Grt5KbT2ZIo+qwlZV/fcbmckg=";
   };
 
   nativeBuildInputs = [
@@ -112,7 +112,7 @@ stdenv.mkDerivation (finalAttrs: {
   doInstallCheck = true;
 
   passthru = {
-    updateScript = nix-update-script { };
+    updateScript = nix-update-script {};
   };
 
   meta = {
